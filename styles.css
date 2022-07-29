@@ -29,8 +29,13 @@ body {
 }
 a {
   text-decoration: none;
+  color: var(--lightest-slate);
 }
-
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 ul {
   list-style: none;
 }
@@ -255,15 +260,14 @@ section {
   display: inline-block;
   color: var(--green);
 }
-.work {
-  background: green;
-}
+
 button {
   outline: none;
   border: none;
 }
 
-.about {
+.about,
+.work {
   padding: 120px;
 }
 .title {
@@ -292,12 +296,40 @@ button {
   margin-top: 50px;
   display: flex;
 }
-.content__desc,
-.content__img {
-  flex-basis: 50%;
+.content__desc {
+  flex-basis: 70%;
 }
 .content__desc p {
+  width: 90%;
   margin-top: 10px;
+}
+.content__desc p span {
+  color: var(--green);
+  font-weight: 500;
+}
+.content__img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 24px;
+  overflow: hidden;
+  width: 300px;
+}
+.content__img img::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border: 2px solide var(--green);
+  border-radius: 24px;
+  top: 20px;
+  left: 20px;
+}
+.content__img img {
+  position: relative;
+  border-radius: 24px;
+  width: 300px;
+  overflow: hidden;
 }
 .content__list {
   display: flex;
@@ -306,5 +338,167 @@ button {
 }
 .content__list li {
   flex-basis: 40%;
-  margin: 10px 20px;
+  margin: 4px 20px;
+}
+
+.tab {
+}
+.tab-btn {
+  background-color: transparent;
+  color: var(--light-slate);
+  font-size: 16px;
+  padding: 10px 24px;
+  margin: -12px;
+  border-bottom: 2px solid var(--light-slate);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.tab-btn:hover {
+  background-color: var(--dark-slate);
+}
+.tab-btn.active {
+  border-bottom: 2px solid var(--green);
+  z-index: 94;
+}
+.experience__filter {
+  margin-top: 100px;
+  width: auto;
+  position: relative;
+}
+
+.experience__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter-status {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--dark-slate);
+  z-index: 201;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.filter-status.active {
+  opacity: 1;
+  visibility: visible;
+}
+.filter-status.active p {
+  opacity: 1;
+}
+.filter-status p {
+  font-size: 20px;
+  color: var(--white);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.filter-status p span {
+  font-weight: 600;
+}
+
+.experience__items {
+  padding: 0 200px;
+  margin-top: 40px;
+}
+.experience__item {
+  cursor: pointer;
+  display: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.experience__item.show {
+  display: block;
+}
+.experience__heading {
+  font-weight: 400;
+}
+.experience__heading span {
+  font-weight: 500;
+  color: var(--green);
+}
+.experience__time {
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+.work__desc {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.line-right,
+.line-left {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.line-right {
+  right: 20px;
+}
+.line-left {
+  left: 20px;
+}
+.line-right a,
+.line-left a {
+  display: block;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: 00.3s ease;
+}
+.line-left a i {
+  font-size: 18px;
+}
+.line-right a:hover,
+.line-left a:hover {
+  font-weight: 600;
+  color: var(--green);
+  margin-bottom: 4px;
+}
+.line-right::after,
+.line-left::after {
+  content: "";
+  margin-top: 20px;
+  display: block;
+  height: 120px;
+  width: 1px;
+  background-color: var(--light-slate);
+}
+.mobile.show {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--dark-navy);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.mobile h1 {
+  font-size: 44px;
+  color: var(--lightest-slate);
+}
+.mobile h2 {
+  margin-top: 40px;
+  color: var(--lightest-slate);
+}
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+  .mobile.show {
+    display: none;
+  }
 }

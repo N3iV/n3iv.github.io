@@ -79,3 +79,39 @@ elements.forEach((element) => {
     element.classList.remove("play");
   });
 });
+const tabs = document.querySelector(".experience__filter");
+let portfolioItems;
+tabs.addEventListener("click", (e) => {
+  console.log(e);
+  if (
+    e.target.classList.contains("tab-btn") &&
+    !e.target.classList.contains("active")
+  ) {
+    tabs.querySelector(".active").classList.remove("active");
+    e.target.classList.add("active");
+    // document.querySelector(".filter-status").classList.add("active");
+    // document.querySelector(
+    //   ".filter-status p"
+    // ).innerHTML = `Filtering <span>${e.target.innerHTML}</span><span> works</span>`;
+    setTimeout(() => {
+      filterItems(e.target);
+    }, 400);
+    // setTimeout(() => {
+    //   document.querySelector(".filter-status").classList.remove("active");
+    // }, 400);
+  }
+});
+function filterItems(filterBtn) {
+  const seclectedCategory = filterBtn.getAttribute("data-filter");
+  console.log(seclectedCategory);
+  document.querySelectorAll(".experience__item").forEach((item) => {
+    const category = item.getAttribute("data-category").split(",");
+    if (
+      category.indexOf(seclectedCategory) !== -1 ||
+      seclectedCategory === "all"
+    ) {
+      item.classList.add("show");
+    } else item.classList.remove("show");
+  });
+  portfolioItems = document.querySelectorAll(".experience__item.show");
+}
