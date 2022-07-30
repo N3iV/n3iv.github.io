@@ -11,15 +11,20 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://use.fontawesome.com/6b5e8db946.js"></script>
+      <script src="https://cdn.rawgit.com/bradley/Blotter/master/build/blotter.min.js"></script>
+    <script src="https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/materials/fliesMaterial.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
 
 <body>
   <div class="mobile show">
-    <h1> Mệt quá không responsive đâu :D </h1>
-    <h2>Xem máy bằng tính đi hihi 🤡🤡</h2>
+    <h1> Hong có responsive đâu :3 </h1>
+    <h2>Xem máy bằng máy tính đi hihi 🤡🤡</h2>
   </div>
   <div class="text-container"></div>
       <div class="text-wrapper">
@@ -89,15 +94,15 @@
     </div>
     <div class="line-left">
       <a>
-         <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-facebook-f"></i>
       </a>
       <a>
-          <i class="fa-brands fa-github-alt"></i>
+        <i class="fa-brands fa-github-alt"></i>
       </a>
       <a>
-         <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
       </a>
-   
+
     </div>
     <nav class="nav ">
       <div class="nav__container container">
@@ -108,17 +113,19 @@
           <li class="nav__item"><span class="nav__link-number">02.<a href="#experience"
                 class="nav__link"></span>Experience
             </a></li>
-          <li class="nav__item"><span class="nav__link-number">03.<a href="" class="nav__link"></span>Work</a>
+          <li class="nav__item"><span class="nav__link-number">03.<a href="#work" class="nav__link"></span>Work</a>
           </li>
-          <li class="nav__item"><span class="nav__link-number">04.<a href="" class="nav__link"></span>Certificate</a>
+          <li class="nav__item"><span class="nav__link-number">04.<a href="#certificate"
+                class="nav__link"></span>Certificate</a>
           </li>
         </ul>
       </div>
     </nav>
-    <section class="container hero" id="hero">
-      <span class="hero__desc">Hi, my name is</span>
-      <h1 class="hero__title">
-        Hoang Vien.
+    <section class="container" id="hero">
+      <div class="hero">
+
+        <span class="hero__desc">Hi, my name is</span>
+        <h1 class="hero__title">
       </h1>
       <h2 class="hero__subtitle">
         I build things for the web.
@@ -127,13 +134,22 @@
         I'm a <span>Front-end (Fresher)</span> developer, currently studying at Da Nang University of Science and
         Techonology
       </p>
-
+    </div>
+      <div class="circle__container">
+            <div class="circle__container__inner">
+                <div class="circle middle__circle"></div>
+                <div class="circle circle__one"></div>
+                <div class="circle circle__two"></div>
+                <div class="circle circle__three"></div>
+                <div class="circle circle__four"></div>
+            </div>
+        </div>
     </section>
     <section class="container about" id="about">
-      <div class="title">
+      <div class="title" data-aos="fade-right">
         <span class="_num">01.</span> <span class="_title">About me</span> <span class="_line"></span>
       </div>
-      <div class="content">
+      <div class="content" data-aos="fade-up" data-aos-delay="300">
         <div class="content__desc">
           <p>Hello! My name is Hoang Vien and I enjoy creating things that live on the internet.</p>
           <p>
@@ -143,10 +159,6 @@
             accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
           </p>
 
-          <p>
-
-            I also recently launched a course that covers everything you need to build a web app using VueJS & ReactJS.
-          </p>
           <p>
 
             Here are a few technologies I’ve been working with recently:
@@ -178,84 +190,83 @@
       </div>
     </section>
     <section class="container experience" id="experience">
-      <div class="title">
+      <div class="title" data-aos="fade-right">
         <span class="_num">02.</span> <span class="_title">Where I’ve Worked </span> <span class="_line"></span>
       </div>
-        <div class=" experience__wrapper">
-          <div class="experience__filter">
-            <button
-              type="button"
-              title="Asset VietNam"
-              class="tab tab-btn active"
-              data-filter="assetVN"
-            >
-              Asset Vietnam
-            </button>
-            <button
-            type="button"
-            title="Provo"
-            class="tab tab-btn"
-            data-filter="provo"
-          >
+      <div class=" experience__wrapper" data-aos="fade-down" data-aos-delay="300">
+        <div class="experience__filter">
+          <button type="button" title="Asset VietNam" class="tab tab-btn active" data-filter="assetVN">
+            Asset Vietnam
+          </button>
+          <button type="button" title="Provo" class="tab tab-btn" data-filter="provo">
             Provo
           </button>
-            <button
-              type="button"
-              title="GDSC"
-              class="tab tab-btn"
-              data-filter="gdsc"
-            >
-              GDSC-DUT
-            </button>
-       
-       
-          </div>
-          <div class="filter-status">
-            <p></p>
-          </div>
+          <button type="button" title="GDSC" class="tab tab-btn" data-filter="gdsc">
+            GDSC-DUT
+          </button>
+
+
         </div>
-           <div class=" experience__items container">
-              <div class="experience__item show" data-category="assetVN">
-                <h1 class="experience__heading">
-                  Front-End developer <span>@Asset VietNam</span>
-                </h1>
-                <span class="experience__time">01/07/2022 - Currently</span>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, soluta voluptas culpa mollitia fuga maiores autem animi similique vitae eveniet aliquid sint accusantium consequatur! Repellendus aut quasi itaque consequuntur? Optio!</p>
+        <div class="filter-status">
+          <p></p>
+        </div>
+      </div>
+      <div class=" experience__items container " data-aos="fade-down" data-aos-delay="300">
+        <div class="experience__item show" data-category="assetVN">
+          <h1 class="experience__heading">
+            Front-End developer <span>@Asset VietNam</span>
+          </h1>
+          <span class="experience__time">2022</span>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, soluta voluptas culpa mollitia fuga maiores
+            autem animi similique vitae eveniet aliquid sint accusantium consequatur! Repellendus aut quasi itaque
+            consequuntur? Optio!</p>
 
-              </div>
-              <div class="experience__item " data-category="provo">
-                  <h1 class="experience__heading">
-                  Front-End developer <span>@Provo</span>
-                </h1>
-                <span class="experience__time">06/2022 - Currently</span>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, soluta voluptas culpa mollitia fuga maiores autem animi similique vitae eveniet aliquid sint accusantium consequatur! Repellendus aut quasi itaque consequuntur? Optio!</p>
-              </div>
-              <div class="experience__item " data-category="gdsc">
-               <h1 class="experience__heading">
-                  Front-End developer <span>@GDSC-DUT</span>
-                </h1>
-                <span class="experience__time">20/09/2021 - 20/07/2022</span>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, soluta voluptas culpa mollitia fuga maiores autem animi similique vitae eveniet aliquid sint accusantium consequatur! Repellendus aut quasi itaque consequuntur? Optio!</p>
+        </div>
+        <div class="experience__item " data-category="provo">
+          <h1 class="experience__heading">
+            Front-End developer <span>@Provo</span>
+          </h1>
+          <span class="experience__time">2022</span>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, soluta voluptas culpa mollitia fuga maiores
+            autem animi similique vitae eveniet aliquid sint accusantium consequatur! Repellendus aut quasi itaque
+            consequuntur? Optio!</p>
+        </div>
+        <div class="experience__item " data-category="gdsc">
+          <h1 class="experience__heading">
+            Front-End developer <span>@GDSC-DUT</span>
+          </h1>
+          <span class="experience__time">20/09/2021 - 20/07/2022</span>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, soluta voluptas culpa mollitia fuga maiores
+            autem animi similique vitae eveniet aliquid sint accusantium consequatur! Repellendus aut quasi itaque
+            consequuntur? Optio!</p>
 
-              </div>
-           </div>
-           <div class="filter-status">
-            <p></p>
-          </div>
+        </div>
+      </div>
+      <div class="filter-status">
+        <p></p>
+      </div>
     </section>
     <section class="container work" id="work">
-         <div class="title">
+      <div class="title" data-aos="fade-down">
         <span class="_num">03.</span> <span class="_title">Some Things I’ve Built </span> <span class="_line"></span>
       </div>
       <div class="work__desc">
         <h1>Mệt quá không code nữa</h1>
-        <h2>Nói chung là dzậy đó </div>
-      </div>
+        <h2>Nói chung là dzậy đó </h2>
+    </section>
+    <section class="container certificate" id="certificate">
+   
     </section>
   </div>
   </div>
+  </div>
   <script src="main.js"></script>
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1300,
+    });
+  </script>
 </body>
 
 </html>
