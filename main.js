@@ -1,4 +1,59 @@
-//
+// //
+// window.addEventListener("load", function () {
+//   gsap.to(".text-wrapper > div", 1, {
+//     x: "500",
+//     ease: Expo.easeInOut,
+//     delay: 1,
+//     stagger: 0.1,
+//   });
+
+//   gsap.to(".text-wrapper", 3, {
+//     y: -600,
+//     scale: 4.5,
+//     rotate: -90,
+//     ease: Expo.easeInOut,
+//     delay: 1.5,
+//   });
+
+//   gsap.to(".text", 1, {
+//     opacity: 1,
+//     ease: Expo.easeInOut,
+//     delay: 3,
+//   });
+
+//   gsap.to(".text-wrapper > div", 4, {
+//     x: "-3500",
+//     ease: Expo.easeInOut,
+//     delay: 3.5,
+//     stagger: 0.05,
+//   });
+//   gsap.to(".text-wrapper", 3, {
+//     opacity: 0,
+//     ease: Expo.easeInOut,
+//     delay: 4.5,
+//   });
+
+//   gsap.to(".text-container", 2, {
+//     bottom: "-100%",
+//     ease: Expo.easeInOut,
+//     delay: 6,
+//   });
+//   gsap.to(".text-wrapper", 4, {
+//     display: "none",
+//     ease: Expo.easeInOut,
+//     delay: 5.5,
+//   });
+
+//   anime.timeline().add({
+//     targets: ".hero ",
+//     opacity: [0, 1],
+//     translateY: [200, 0],
+//     translateZ: 0,
+//     easing: "easeOutExpo",
+//     duration: 2000,
+//     delay: (el, i) => 7000 + 40 * i,
+//   });
+// });
 
 // !hover effect
 var hoverDistort = new hoverEffect({
@@ -189,3 +244,23 @@ var blotter = new Blotter(material, {
 
 var scope = blotter.forText(text);
 scope.appendTo(container);
+
+$(document).ready(function () {
+  console.log("hehe");
+  $(window).on("scroll", function () {
+    var link = $(".navbar a.dot");
+    var top = $(window).scrollTop();
+    console.log(link, top);
+    $("section").each(function () {
+      var id = $(this).attr("id");
+      var height = $(this).height();
+      var offset = $(this).offset().top;
+      if (top >= offset && top < offset + height) {
+        link.removeClass("active");
+        $(".navbar")
+          .find('[data-scroll="' + id + '"]')
+          .addClass("active");
+      }
+    });
+  });
+});

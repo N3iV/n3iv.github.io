@@ -15,11 +15,12 @@
     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://use.fontawesome.com/6b5e8db946.js"></script>
-      <script src="https://cdn.rawgit.com/bradley/Blotter/master/build/blotter.min.js"></script>
-    <script src="https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/materials/fliesMaterial.js"></script>
+  <script src="https://cdn.rawgit.com/bradley/Blotter/master/build/blotter.min.js"></script>
+  <script src="https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/materials/fliesMaterial.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
 </head>
 
 <body>
@@ -90,9 +91,9 @@
         </div>
       </div> -->
   <div class="main">
-    <div class="line-right">
-      <a href="hdhvien2002@gmail.com">hdhvien2002@gmail.com</a>
-    </div>
+    <!-- <div class="line-right">
+      <a href="mailto:hdhvien2002@gmail.com">hdhvien2002@gmail.com</a>
+    </div> -->
     <div class="line-left">
       <a>
         <i class="fa-brands fa-facebook-f"></i>
@@ -105,6 +106,43 @@
       </a>
 
     </div>
+    <nav class="navbar">
+
+      <ul>
+
+        <li>
+          <a href="#hero" class="dot active" data-scroll="hero">
+            <span>hero</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#about" class="dot" data-scroll="about">
+            <span>about</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#experience" class="dot" data-scroll="experience">
+            <span>experience</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#work" class="dot" data-scroll="work">
+            <span>work</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#certificate" class="dot" data-scroll="certificate">
+            <span>certificate</span>
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
     <nav class="nav ">
       <div class="nav__container container">
         <h1 class="nav__logo">Vi3nne</h1>
@@ -127,24 +165,24 @@
 
         <span class="hero__desc">Hi, my name is</span>
         <h1 class="hero__title">
-      </h1>
-      <h2 class="hero__subtitle">
-        I build things for the web.
-      </h2>
-      <p class="hero__desc-2">
-        I'm a <span>Front-end (Fresher)</span> developer, currently studying at Da Nang University of Science and
-        Techonology
-      </p>
-    </div>
+        </h1>
+        <h2 class="hero__subtitle">
+          I build things for the web.
+        </h2>
+        <p class="hero__desc-2">
+          I'm a <span>Front-end (Fresher)</span> developer, currently studying at Da Nang University of Science and
+          Techonology
+        </p>
+      </div>
       <div class="circle__container">
-            <div class="circle__container__inner">
-                <div class="circle middle__circle"></div>
-                <div class="circle circle__one"></div>
-                <div class="circle circle__two"></div>
-                <div class="circle circle__three"></div>
-                <div class="circle circle__four"></div>
-            </div>
+        <div class="circle__container__inner">
+          <div class="circle middle__circle"></div>
+          <div class="circle circle__one"></div>
+          <div class="circle circle__two"></div>
+          <div class="circle circle__three"></div>
+          <div class="circle circle__four"></div>
         </div>
+      </div>
     </section>
     <section class="container about" id="about">
       <div class="title" data-aos="fade-right">
@@ -191,7 +229,7 @@
     </section>
     <section class="container experience" id="experience">
       <div class="title" data-aos="fade-right">
-        <span class="_num">02.</span> <span class="_title">Where I’ve Worked </span> <span class="_line"></span>
+        <span class="_num">02.</span> <span class="_title">Where I’ve Worked </span>
       </div>
       <div class=" experience__wrapper" data-aos="fade-down" data-aos-delay="300">
         <div class="experience__filter">
@@ -254,17 +292,34 @@
         <h1>Mệt quá không code nữa</h1>
         <h2>Nói chung là dzậy đó </h2>
     </section>
-    <section class="container certificate" id="certificate">
-   
+    <section class="certificate container" id="certificate">
+      <div class=" title" data-aos="fade-down">
+        <span class="_num">04.</span> <span class="_title">My awards </span>
+      </div>
+      <span data-aos="fade-down" style=" display: inline-block ; margin: 10px 0;">Tới đoạn lười code rồi 😭 </span>
+      <div class="cert__container">
+
+        <div data-aos="fade-right" data-aos-delay="200"  class="cert__block block-1">
+          <h1>Unihack 2022.</h1>
+          <img src="./assets/unihack.jpg" alt="">
+        </div>
+        <div data-aos="fade-left" data-aos-delay="500"   class="cert__block block-2">
+          <h1>Dev-Fest 2021.</h1>
+          <img src="./assets/devfest.jpg" alt="">
+        </div>
+ 
+
+      </div>
+
     </section>
   </div>
   </div>
   </div>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <script src="hover-effect.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
   <script src="main.js"></script>
   <script>
     AOS.init({
