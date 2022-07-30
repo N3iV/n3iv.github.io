@@ -329,22 +329,37 @@ button {
   justify-content: flex-end;
   align-items: center;
   border-radius: 24px;
-  overflow: hidden;
-  width: 300px;
+  cursor: pointer;
+  width: 280px;
+  height: 350px;
+  position: relative;
 }
-.content__img img::before {
+.content__img canvas {
+  border-radius: 24px;
+}
+.content__img::before {
   position: absolute;
   content: "";
   height: 100%;
   width: 100%;
-  border: 2px solide var(--green);
+  border: 2px solid var(--green);
   border-radius: 24px;
+  z-index: -1;
   top: 20px;
   left: 20px;
+  transition: 0.3s ease;
 }
+
+.content__img:hover.content__img::before {
+  top: 0;
+  left: 0;
+  border-color: transparent;
+}
+
 .content__img img {
   position: relative;
   border-radius: 24px;
+
   width: 300px;
   overflow: hidden;
 }
